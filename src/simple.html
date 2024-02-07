@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/assets/images/vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/base/normalize.css" />
+	<link rel="stylesheet" href="css/base/base.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<title>Rock, Paper, Scissors</title>
+</head>
+<body>
+    <main>
+        <div class="tittle-container">
+            <div class="score">
+                <p>YOU</p>
+                <h1 id="player-score">0</h1>
+            </div>
+            <h1 class="tittle">
+                ROCK <br> PAPER <br> SCISSORS
+            </h1>
+            <div class="score">
+                <p>PC</p>
+                <h1 id="pc-score">0</h1>
+            </div>
+        </div>
+    
+        <div id="game-options" class="game-container" data-gamemode="simple">
+             <div id="rock-button" class="game-button rock-position rock" data-selection="rock">
+                   <img class="game-icon" src="./assets/images/icon-rock.svg" alt="">
+             </div>
+            <div id="paper-button" class="game-button paper-position paper" data-selection="paper">
+                <div class="game-icon">
+                    <img class="game-icon" src="./assets/images/icon-paper.svg" alt="">
+                </div>
+            </div>
+            <div id="scissors-button" class="game-button scissors-position scissors" data-selection="scissors">
+                <div class="game-icon">
+                    <img class="game-icon" src="./assets/images/icon-scissors.svg" alt="">
+                </div>
+            </div>
+        </div>
+    
+        <div id="game-result" class="result-container hidden">
+            <div class="result-options">
+                <div class="option">
+                    <p>
+                        YOU PICKED
+                    </p>
+                    <div id="player-selection" class="game-button">
+                        <img id="img-player" src="" alt="">
+                    </div>
+                </div>
+                <div class=" option">
+                    <p>
+                        THE PC PICKED
+                    </p>
+                    <div id="pc-selection" class="game-button">
+                        <img id="img-pc" src="" alt="">
+                    </div>
+                </div>
+            </div>
+            <h1 id="result-output" class="tittle-final">YOU WIN</h1>            
+            <button id="play-again" class="playagain-button">PLAY AGAIN</button>
+        </div>
+    </main>
+    
+
+
+    <script type="module" src="./js/index.js"></script>
+</body>
+</html>

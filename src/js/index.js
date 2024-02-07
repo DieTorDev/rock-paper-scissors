@@ -1,3 +1,5 @@
-import { sayHello } from './demo';
+import { gameOptionsElement, playAgainElement } from './dom';
+import { getGameWinner, removeClassResults } from './functions';
 
-sayHello();
+gameOptionsElement.addEventListener('click', getGameWinner);
+playAgainElement.addEventListener('click', removeClassResults);
