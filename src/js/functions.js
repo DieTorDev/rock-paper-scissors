@@ -8,44 +8,13 @@ import {
 	pcSelectionOutput
 } from './dom';
 
+import { GAME_OPTIONS, GAME_IMAGES } from './constants';
+
 const pcOptions = ['rock', 'paper', 'scissors', 'spock', 'lizard'];
 let playerSelectionRemove = '';
 let pcSelectionRemove = '';
 let playerCounter = 0;
 let pcCounter = 0;
-
-const GAME_OPTIONS = {
-	rock: {
-		paper: false,
-		scissors: true,
-		lizard: true,
-		spock: false
-	},
-	paper: {
-		rock: true,
-		scissors: false,
-		lizard: false,
-		spock: true
-	},
-	scissors: {
-		rock: false,
-		paper: true,
-		spock: false,
-		lizard: true
-	},
-	spock: {
-		rock: true,
-		paper: false,
-		scissors: true,
-		lizard: false
-	},
-	lizard: {
-		rock: false,
-		paper: true,
-		scissors: false,
-		spock: true
-	}
-};
 
 const getLength = gamemode => {
 	if (gamemode === 'simple') {
@@ -82,8 +51,9 @@ const printPlayerPcSelection = (player, pc) => {
 	playerSelectionOutput.classList.add(player);
 	pcSelectionOutput.classList.add(pc);
 
-	playerSelectionOutput.children[0].src = `../assets/images/icon-${player}.svg`;
-	pcSelectionOutput.children[0].src = `../assets/images/icon-${pc}.svg`;
+	console.log();
+	playerSelectionOutput.children[0].src = GAME_IMAGES[player.toUpperCase()];
+	pcSelectionOutput.children[0].src = GAME_IMAGES[pc.toUpperCase()];
 };
 
 const getGameWinner = event => {
