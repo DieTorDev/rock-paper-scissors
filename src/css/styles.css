@@ -26,6 +26,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    user-select: none;
 }
 main {
     max-width: 500px;

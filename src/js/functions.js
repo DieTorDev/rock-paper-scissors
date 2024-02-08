@@ -82,8 +82,8 @@ const printPlayerPcSelection = (player, pc) => {
 	playerSelectionOutput.classList.add(player);
 	pcSelectionOutput.classList.add(pc);
 
-	playerSelectionOutput.children[0].src = `./assets/images/icon-${player}.svg`;
-	pcSelectionOutput.children[0].src = `./assets/images/icon-${pc}.svg`;
+	playerSelectionOutput.children[0].src = `../assets/images/icon-${player}.svg`;
+	pcSelectionOutput.children[0].src = `../assets/images/icon-${pc}.svg`;
 };
 
 const getGameWinner = event => {

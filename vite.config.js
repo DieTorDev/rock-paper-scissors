@@ -1,3 +1,4 @@
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
@@ -9,6 +10,13 @@ export default defineConfig({
 	base: '',
 	root: 'src',
 	build: {
+		rollupOptions: {
+			input: {
+				main: resolve(__dirname, 'src/index.html'),
+				simple: resolve(__dirname, 'src/html/simple.html'),
+				advanced: resolve(__dirname, 'src/html/advanced.html')
+			}
+		},
 		outDir: finalFolder
 	}
 });
