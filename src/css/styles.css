@@ -21,6 +21,7 @@
 }
 
 body{
+    height: 100vh;
     background: var(--bg-body-color);
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,14 +33,26 @@ main {
     margin: auto;
 }
 
+@media (max-width: 576px) {
+    main{
+        transform: scale(.80);
+    }
+  }
+
 .tittle-index{
     text-align: center;
     color: var(--tittle-main-color);
     line-height: 30px;
-    margin-top: 150px;
+    margin-top: 30px;
     margin-bottom: 50px;
 }
 
+@media (min-width: 576px) {
+    .tittle-index{
+        margin-top: 150px;
+    }
+  }
+  
 .selector-container{
     margin: auto;
     display: flex;
